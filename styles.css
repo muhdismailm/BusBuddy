@@ -240,7 +240,7 @@ footer {
 }
 @keyframes moveBus {
     0% { left: -10px; } /* Start off screen to the left */
-    100% { left: 90%; } /* Move to the right end of the screen */
+    100% { left: 75%; } /* Move to the right end of the screen */
 }
 
 #bus {
