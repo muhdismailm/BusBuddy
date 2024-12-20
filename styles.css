@@ -62,7 +62,7 @@ nav {
     padding: 20px;
     background-color: rgba(0, 38, 78, 0.1); /* Light background color to make it stand out */
     border: 2px solid #00264e; /* Dark border for emphasis */
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
 }
@@ -77,7 +77,7 @@ nav {
     font-size: 1.1em; /* Larger font for dropdowns and button */
     padding: 12px;
     border: 1px solid #00264e;
-    border-radius: 5px;
+    border-radius: 200px;
 }
 
 #route-form button {
@@ -240,7 +240,7 @@ footer {
 }
 @keyframes moveBus {
     0% { left: -10px; } /* Start off screen to the left */
-    100% { left: 72%; } /* Move to the right end of the screen */
+    100% { left: 75%; } /* Move to the right end of the screen */
 }
 
 #bus {
@@ -248,6 +248,36 @@ footer {
     animation-duration: 5s; /* Duration of the animation */
     animation-fill-mode: forwards; /* Keep the last keyframe */
 }
+
+/* New Route Button Style */
+#new-route-button {
+    background-color: #00264e;
+    color: #ffffff;
+    height: 50px;  
+    width: 30%;         /* Set height to 50px */
+    margin-left: 34%;
+    font-size: 1em;         /* Adjust font size to fit within the button */
+    padding: 15px 20px;        /* Horizontal padding for even spacing */
+    border: 1px solid #00264e;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#new-route-button:hover {
+    background-color: #005699; /* Slightly brighter on hover */
+}
+
+/* Media Queries for New Route Button */
+@media (max-width: 768px) {
+    #new-route-button {
+        margin-left:13%;
+        width: 75%;
+    }
+}
+
 
 /* Responsive Design */
 @media (min-width: 768px) {
