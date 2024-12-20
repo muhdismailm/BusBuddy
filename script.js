@@ -132,6 +132,7 @@ function updateSearchHistory() {
 
 }
 
+
 // Simulated Weather Notification
 const weatherAlert = document.getElementById('weather-alert');
 setTimeout(() => {
