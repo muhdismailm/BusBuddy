@@ -7,29 +7,28 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
-<body background="ij.jpg">
+<body background="/ij.jpg">
 
-    <!-- Navigation Bar at the top -->
     <!-- Navigation Bar with Hamburger Menu -->
-<nav>
-    <div class="nav-container">
-       <div id="icon">
-        <img src="icon.png">
-       </div> 
-        <i class="fa-solid fa-bus"></i>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav>
+        <div class="nav-container">
+            <div id="icon">
+                <img src="/icon.png">
+            </div> 
+            <i class="fa-solid fa-bus"></i>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#route">Route</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </div>
-        <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#route">Route</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Header Section -->
     <header>
@@ -39,7 +38,6 @@
 
     <!-- Navigation and Utilities -->
     <div class="utilities">
-        <!-- Language Switching -->
         <div id="lang">
             <label for="language">Language: </label>
             <select id="language">
@@ -49,7 +47,6 @@
                 <option value="ar">Arabic</option>
             </select>
         </div>
-        <!-- Weather Notifications -->
         <div id="weather-alert">Checking weather for travel conditions...</div>
     </div>
 
@@ -78,10 +75,10 @@
             </select>
 
             <button type="submit">Find My Bus</button>
-            
-            
-            
         </form>
+
+        <!-- New Route Button -->
+        <button id="new-route-button" onclick="window.location.href='login.html'">Add New Route</button>
         
         <!-- Recent Search History -->
         <div id="history">
@@ -91,13 +88,12 @@
         <div id="bus-container" style="display: none;">
             <img id="bus" src="bus.png" alt="Bus" style="width: 100px; position: relative;">
         </div>
-    <div class="map">
-        <a href="https://www.google.com/maps/dir/Kozhikode,+Kerala/Quilandy,+Kerala/@11.3468327,75.6548324,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3ba65938563d4747:0x32150641ca32ecab!2m2!1d75.78041!2d11.2587531!1m5!1m1!1s0x3ba68a189944e903:0xf160445b1b9d786e!2m2!1d75.6976443!2d11.4428699?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none;">
-            <i class="bi bi-geo-alt-fill" style="font-size: 30px; color: #00264e;"></i> <!-- For Bootstrap Icons -->
-        </a>
-    </div>
+        <div class="map">
+            <a href="https://www.google.com/maps/dir/Kozhikode,+Kerala/Quilandy,+Kerala/@11.3468327,75.6548324,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x3ba65938563d4747:0x32150641ca32ecab!2m2!1d75.78041!2d11.2587531!1m5!1m1!1s0x3ba68a189944e903:0xf160445b1b9d786e!2m2!1d75.6976443!2d11.4428699?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="text-decoration: none;">
+                <i class="bi bi-geo-alt-fill" style="font-size: 30px; color: #00264e;"></i>
+            </a>
+        </div>
     </section>
-        
 
     <!-- Route Display Section -->
     <section id="route">
@@ -119,31 +115,21 @@
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2><br>
-        <p><h2>Welcome to Bus Buddy</h2>
-
-            <pre>Your Journey, Simplified.</pre>
-            
-            <p>Bus Buddy is your one-stop solution for finding the most convenient and efficient bus routes for your travels. Our mission is to make bus travel easier, faster, and more enjoyable.</p>
-            
-            <p>We understand the frustration of searching for bus routes, schedules, and fares. That's why we created Bus Buddy to provide a hassle-free experience for travelers. Our team of passionate developers, designers, and transportation experts worked tirelessly to bring you the most comprehensive and user-friendly platform.</p>
-            </p><br>
-        <p><h2>Contact Us</h2>
-
-           <pre>Have feedback or suggestions? We'd love to hear from you!</pre> 
-            
-            <pre>Email: devanandhaaswathi8@gmail.com</pre>
-            <pre>Phone: +91 7034909294</pre>
-            <pre>other contacts : 9567826783,9567400424</pre></p>
+        <h2>About Us</h2>
+        <p>Welcome to Bus Buddy</p>
+        <p>Your Journey, Simplified.</p>
+        <p>Bus Buddy is your one-stop solution for finding the most convenient and efficient bus routes for your travels. Our mission is to make bus travel easier, faster, and more enjoyable.</p>
+        <p>Contact Us:</p>
+        <p>Email: devanandhaaswathi8@gmail.com</p>
+        <p>Phone: +91 7034909294</p>
     </section>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Bus Route Finder. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script> <!-- Link to JavaScript file -->
- 
-    
 
 </body>
 </html>
