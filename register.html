@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Local Bus Timetable</title>
+    <style>
+        /* Color Theme */
+        :root {
+            --main-bg-color: #023e80;
+            --button-hover-color: #00264e;
+            --input-border-color: #ddd;
+            --text-color: #333;
+            --container-bg-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: var(--text-color);
+            background-size: cover;
+        }
+        .register-container {
+            width: 300px;
+            padding: 2em;
+            background: var(--container-bg-color);
+            backdrop-filter: blur(10px); /* Blurred background */
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 13px;
+            text-align: center;
+        }
+        h2 {
+            color: var(--main-bg-color);
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            height: 23px;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid var(--input-border-color);
+            border-radius: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 0.7em;
+            background-color: var(--main-bg-color);
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+        .login-link {
+            color: var(--main-bg-color);
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 1em;
+        }
+        .login-link:hover {
+            color: var(--button-hover-color);
+        }
+    </style>
+</head>
+<body background="/ij.jpg">
+    <div class="register-container">
+        <h2>Register</h2>
+        <form onsubmit="handleRegister(event)">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- Login Link -->
+        <p>Already have an account? <a href="login.html" class="login-link">Login</a></p>
+    </div>
+
+    <script>
+        function handleRegister(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            // Basic form validation
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return;
+            }
+
+            alert("Registration successful! You can now log in with your new account.");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
